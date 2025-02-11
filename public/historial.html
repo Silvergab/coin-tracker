@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Transacciones - Coin Tracker</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Encabezado con título y navegación -->
+  <header class="main-header">
+    <h1 id="main-title">Historial de Transacciones</h1>
+    <nav class="dashboard-nav">
+      <button id="ver-portafolio" class="nav-button">Ver Portafolio</button>
+      <button id="logout-button" class="nav-button">Cerrar Sesión</button>
+    </nav>
+  </header>
+  
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <!-- Sección con la tabla del historial de transacciones -->
+    <section class="transaction-history-section">
+      <h2 class="section-title">Transacciones Registradas</h2>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Total</th>
+            <th>Fecha</th>
+            <th>Criptomoneda</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <!-- Transacciones cargadas dinámicamente -->
+        <tbody id="transactions-table"></tbody>
+      </table>
+      <!-- Mensajes dinámicos como errores o confirmaciones -->
+      <p id="message" class="message"></p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="main-footer">
+    <p>&copy; 2024 Coin Tracker. Todos los derechos reservados.</p>
+  </footer>
+  
+  <!-- Script principal de esta página -->
+  <script type="module" src="/js/historial.js"></script>
+</body>
+</html>

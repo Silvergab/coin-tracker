@@ -1,0 +1,608 @@
+/* General Styles */
+body {
+  /* Fondo oscuro y gradiente para un estilo elegante y profesional */
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Estructura vertical */
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Wrapper Principal */
+.wrapper {
+  /* Contenedor principal centrado tanto vertical como horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Se expande para ocupar todo el espacio disponible */
+}
+
+/* Contenedor Principal */
+.index-container {
+  /* Diseño limpio y centrado para la página principal */
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado */
+.main-header h1 {
+  /* Título principal con un color dorado brillante */
+  color: #ffd700;
+  font-size: 36px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.main-header p {
+  /* Subtítulo más pequeño y menos destacado */
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #b0b0b0;
+}
+
+/* Botones de Acción */
+.action-buttons {
+  /* Contenedor para botones, alineados horizontalmente */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.action-button {
+  /* Botones destacados con colores llamativos */
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd700, #ffb700);
+  color: #121212;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+.action-button:hover {
+  /* Efecto visual al pasar el cursor */
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Footer */
+.main-footer {
+  /* Pie de página discreto y minimalista */
+  text-align: center;
+  font-size: 14px;
+  color: #b0b0b0;
+  padding: 10px 0;
+  background: none;
+  border: none;
+}
+
+/* Login Styles */
+.login-container {
+  /* Estilo del formulario de login */
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container .login-title {
+  /* Título destacado en la página de login */
+  color: #ffd700;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+
+.styled-form {
+  /* Estilo para formularios */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.styled-form label {
+  /* Estilo para etiquetas de formularios */
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-form input {
+  /* Campos de entrada con diseño limpio */
+  border: 1px solid #ffd700;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.styled-form input::placeholder {
+  /* Estilo para el texto placeholder */
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+.styled-form button {
+  /* Botón dentro del formulario */
+  align-self: center;
+  margin-top: 10px;
+}
+
+/* Mensajes de Éxito y Error */
+
+.message {
+  /* Estilo general para mensajes */
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.message:empty {
+  display: none; /* Ocultar mensajes vacíos */
+}
+
+.message.success {
+  /* Estilo de mensajes exitosos */
+  color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.2);
+  border: 1px solid #4caf50;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.message.error {
+  /* Estilo de mensajes de error */
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.2);
+  border: 1px solid #f44336;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.message.info {
+  /* Estilo de mensajes informativos */
+  color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.2);
+  border: 1px solid #2196f3;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+/* Enlace de Registro */
+.register-link {
+  /* Estilo para el enlace de registro */
+  font-size: 13px;
+  color: #ffd700;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.register-link:hover {
+  color: #ffc700;
+}
+
+/* Encabezado del Dashboard */
+.dashboard-header {
+  /* Estilo para el encabezado del dashboard */
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Barra de Navegación en el Dashboard */
+.dashboard-nav {
+  /* Contenedor para los botones de navegación */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-button {
+  /* Estilo para botones de navegación */
+  background-color: #fdda44;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  /* Efecto hover en botones de navegación */
+  background-color: #ffd700;
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido Principal del Dashboard */
+.dashboard-content {
+  /* Estilo para el contenido principal del dashboard */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-content {
+  /* Estilo para el contenido principal */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Secciones */
+.portfolio-section,
+.crypto-list-section,
+.transaction-section,
+.transaction-history-section {
+  /* Estilo para las secciones del dashboard */
+  margin-bottom: 40px;
+}
+
+/* Títulos de Secciones */
+.section-title {
+  /* Estilo para los títulos de las secciones */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color: #fdda44;
+  margin-bottom: 2rem;
+}
+
+/* Título Principal */
+#main-title {
+  /* Estilo para el título principal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Tablas */
+.styled-table {
+  /* Tablas con diseño limpio y moderno */
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.styled-table th,
+.styled-table td {
+  /* Tamaño y alineación uniforme en celdas */
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.styled-table thead {
+  /* Estilo para la cabecera de la tabla */
+  background: #ffd700;
+  color: #121212;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.styled-table tbody tr:nth-child(odd) {
+  /* Estilo para filas impares */
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.styled-table tbody tr:hover {
+  /* Efecto hover en las filas */
+  background: rgba(255, 215, 0, 0.2);
+}
+
+/* Formulario de Transacciones */
+.styled-form {
+  /* Estilo para formularios */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.styled-form label {
+  /* Estilo para etiquetas de formularios */
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Grupo de Radios */
+.radio-group {
+  /* Estilo para el grupo de opciones de radio */
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.radio-group label {
+  /* Estilo para etiquetas dentro del grupo de radios */
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  /* Estilo para botones de radio */
+  margin-right: 0.5rem;
+  accent-color: gold;
+}
+
+/* Botones de Acción en Formularios */
+.action-button:hover {
+  /* Efecto hover en botones de acción */
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Footer del Dashboard */
+.dashboard-footer {
+  /* Estilo para el pie de página del dashboard */
+  text-align: center;
+  font-size: 14px;
+  color: #b0b0b0;
+  padding: 10px 0;
+  background: none;
+  border: none;
+}
+
+/* Botones de acción en el historial */
+.guardar,
+.eliminar {
+  /* Estilo para botones de guardar y eliminar */
+  background-color: #ffd700;
+  color: #121212;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.guardar:hover {
+  /* Efecto hover para botón guardar */
+  background-color: #ffcc00;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.eliminar:hover {
+  /* Efecto hover para botón eliminar */
+  background-color: #ff4d4d;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Espaciado entre los botones */
+table .guardar,
+table .eliminar {
+  margin: 0 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* Dispositivos pequeños (móviles, max-width: 480px) */
+@media (max-width: 480px) {
+  /* Ajuste del diseño general para pantallas móviles pequeñas */
+  body {
+    padding: 10px;
+  }
+
+  /* Títulos */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Contenedor de login */
+  .login-container {
+    padding: 0; /* Elimina el padding extra para ajustar al espacio reducido */
+  }
+
+  /* Botones */
+  .action-button,
+  .nav-button {
+    width: 100%; /* Los botones ocupan todo el ancho disponible */
+    max-width: 90%; /* Asegura que no sean demasiado anchos */
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Formularios */
+  .styled-form {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .styled-form input,
+  .styled-form button {
+    font-size: 14px; /* Tamaño más pequeño para pantallas pequeñas */
+    padding: 10px; /* Espaciado interno ajustado */
+  }
+
+  /* Tablas */
+  .styled-table {
+    display: block; /* Permite scroll horizontal si es necesario */
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    font-size: 12px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px;
+  }
+}
+
+/* Tablets en orientación vertical (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Ajustes generales para tablets en orientación vertical */
+  body {
+    display: flex; /* Asegura que el contenido esté centrado */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Login Container */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  /* Centrar el enlace específicamente en pantallas pequeñas */
+  .register-link {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    color: #ffd700;
+    text-decoration: none;
+  }
+
+  .register-link:hover {
+    color: #ffc700; /* Dorado más claro al pasar el cursor */
+  }
+
+  /* Títulos */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  /* Botones */
+  .nav-button {
+    width: 100%;
+    max-width: 90%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Formularios */
+  .styled-form {
+    max-width: 80%;
+    gap: 20px;
+  }
+
+  /* Tablas */
+  .styled-table {
+    font-size: 14px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+  }
+}
+
+/* Tablets horizontales y pantallas grandes (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .styled-table {
+    font-size: 15px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px;
+  }
+}
+
+/* Pantallas grandes (min-width: 1025px) */
+@media (min-width: 1025px) {
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+
+  .dashboard-content {
+    max-width: 1200px;
+  }
+
+  .styled-form input {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .action-button {
+    font-size: 18px;
+    padding: 15px 25px;
+  }
+
+  .styled-table {
+    font-size: 16px;
+  }
+}

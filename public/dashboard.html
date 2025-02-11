@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Coin Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado principal del dashboard -->
+    <header class="main-header dashboard-header">
+      <!-- Título del dashboard, mostrando al usuario que está viendo su portafolio -->
+      <h1 id="main-title">Mi Portafolio</h1>
+      <!-- Barra de navegación con opciones rápidas -->
+      <nav class="dashboard-nav">
+        <!-- Botón para cambiar a la vista del historial de transacciones -->
+        <button id="ver-historial" class="nav-button">Ver Historial</button>
+        <!-- Botón para cerrar sesión, limpiando la sesión del usuario -->
+        <button id="logout-button" class="nav-button">Cerrar Sesión</button>
+      </nav>
+    </header>
+
+    <main class="main-content dashboard-content">
+      <!-- Sección del resumen del portafolio -->
+      <section class="portfolio-section">
+        <!-- Título de la sección para el resumen del portafolio -->
+        <h2 class="section-title">Resumen del Portafolio</h2>
+        <!-- Tabla donde se muestra información detallada de las criptomonedas -->
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <!-- Columnas con información clave para las criptomonedas del portafolio -->
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Símbolo</th>
+              <th>Cantidad</th>
+              <th>Precio Actual</th>
+              <th>Valor Actual</th>
+              <th>Ganancia/Pérdida</th>
+            </tr>
+          </thead>
+          <!-- El contenido de la tabla se carga dinámicamente desde el backend -->
+          <tbody id="portfolio-table"></tbody>
+        </table>
+        <!-- Botón para actualizar los precios en tiempo real -->
+        <button id="update-prices" class="action-button">
+          Actualizar Precios
+        </button>
+        <!-- Mensaje informativo que aparecerá al usuario tras actualizar precios -->
+        <p id="update-message" class="message info"></p>
+      </section>
+
+      <!-- Sección con la lista de criptomonedas disponibles -->
+      <section id="crypto-list-section" class="crypto-list-section">
+        <!-- Título de la lista de criptomonedas -->
+        <h2 class="section-title">Criptomonedas Disponibles</h2>
+        <!-- Tabla donde se muestra la información básica de las criptomonedas -->
+        <table id="crypto-list-table" class="styled-table">
+          <thead>
+            <tr>
+              <!-- Columnas para ID, nombre y símbolo de las criptomonedas -->
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Símbolo</th>
+            </tr>
+          </thead>
+          <!-- Los datos se cargan dinámicamente desde el backend -->
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Sección para registrar una nueva transacción -->
+      <section class="transaction-section">
+        <!-- Título de la sección para el formulario de transacciones -->
+        <h2 class="section-title">Registrar Transacción</h2>
+        <!-- Formulario que permite al usuario registrar compras o ventas -->
+        <form id="transaction-form" class="styled-form">
+          <!-- Campo para ingresar el ID de la criptomoneda -->
+          <label for="id-criptomoneda">Criptomoneda ID:</label>
+          <input
+            type="number"
+            id="id-criptomoneda"
+            placeholder="ID de la criptomoneda"
+            required
+          />
+
+          <!-- Campo para ingresar la cantidad a comprar o vender -->
+          <label for="cantidad">Cantidad:</label>
+          <input
+            type="number"
+            step="0.01"
+            id="cantidad"
+            placeholder="Cantidad"
+            required
+          />
+
+          <!-- Campo para ingresar el precio unitario -->
+          <label for="precio">Precio:</label>
+          <input
+            type="number"
+            step="0.01"
+            id="precio"
+            placeholder="Precio unitario"
+            required
+          />
+
+          <!-- Opciones de tipo de transacción: compra o venta -->
+          <label>Tipo:</label>
+          <div class="radio-group">
+            <!-- Radio button para seleccionar compra -->
+            <label for="tipo-compra">
+              <input
+                type="radio"
+                id="tipo-compra"
+                name="tipo"
+                value="compra"
+                checked
+              />
+              Compra
+            </label>
+            <!-- Radio button para seleccionar venta -->
+            <label for="tipo-venta">
+              <input type="radio" id="tipo-venta" name="tipo" value="venta" />
+              Venta
+            </label>
+          </div>
+
+          <!-- Botón para enviar los datos del formulario -->
+          <button type="submit" class="action-button">Registrar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Pie de página del dashboard -->
+    <footer class="main-footer dashboard-footer">
+      <p>&copy; 2024 Coin Tracker. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script principal para manejar la funcionalidad del dashboard -->
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
